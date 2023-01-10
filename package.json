@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "nhtsa": "^1.2.7",
+    "node-telegram-bot-api": "^0.61.0",
+    "selenium-webdriver": "^4.7.1"
+  }
+}
