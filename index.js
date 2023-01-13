@@ -6,17 +6,16 @@ const nhtsa = require('nhtsa');
     const { data } = await nhtsa.decodeVin('WUAAU34248N006164');
 
 
-    console.log (r(50,data));
+    console.log ('Литры: ' + r(13,data), '\nХей: ' + r(12,data));
     
 
   })(); 
 
 function r (eeeeeeeeee,data){
-    return data.Results.find(item => item.VariableId  == eeeeeeeeee)
+    return data.Results.find(item => item.VariableId  == eeeeeeeeee).Value   
 }
-
-
-
-
-// 12;13;11;14;18;24;29;
+async function askStuff() {
+  const name = await input.text('What is your name?', { default: 'Fred' });
+  
+// 12;13;11;14;18;24;29;136;
 //const token = "5741596751:AAFJSJofIE934NOL_-TkSwpryd3UW9_nM6k"
